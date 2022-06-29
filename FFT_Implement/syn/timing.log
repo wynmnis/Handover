@@ -1,0 +1,1257 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : top
+Version: R-2020.09
+Date   : Tue Jun  7 21:15:26 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: segmented
+
+  Startpoint: FFT_TOP_CONFIG_FFT_M4_BR1_af_pre_delay1_reg_65_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: R_3747 (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FFT_TOP_CONFIG_FFT_M4_BR1_af_pre_delay1_reg_65_/CK (DFFRHQX1)
+                                                          0.00 #     0.00 r
+  FFT_TOP_CONFIG_FFT_M4_BR1_af_pre_delay1_reg_65_/Q (DFFRHQX1)
+                                                          0.17       0.17 r
+  U118480/Y (XNOR2X1)                                     0.13       0.30 r
+  U66507/Y (CLKBUFX4)                                     0.33       0.63 r
+  U3817/Y (CLKNAND2X8)                                    0.24       0.86 f
+  U118554/Y (OAI22X1)                                     0.18       1.05 r
+  U118602/S (ADDFX1)                                      0.26       1.31 f
+  U118622/CO (ADDFX1)                                     0.21       1.52 f
+  U118627/S (ADDFX2)                                      0.18       1.70 r
+  U118626/CO (ADDFX2)                                     0.21       1.91 r
+  U118826/CO (ADDFX2)                                     0.19       2.09 r
+  U118828/S (ADDFX2)                                      0.24       2.33 f
+  U41271/Y (NOR2X4)                                       0.11       2.44 r
+  U49859/Y (OR2X4)                                        0.10       2.54 r
+  U23765/Y (INVX6)                                        0.04       2.59 f
+  U1539/Y (NAND2X6)                                       0.05       2.64 r
+  U51084/Y (NOR2X6)                                       0.02       2.66 f
+  U37760/Y (NAND2X4)                                      0.04       2.70 r
+  U49615/Y (AND3X8)                                       0.09       2.79 r
+  U20865/Y (INVX6)                                        0.03       2.82 f
+  U51239/Y (AOI21X8)                                      0.06       2.88 r
+  U51238/Y (XOR2X8)                                       0.08       2.95 r
+  U48284/Y (NAND2X5)                                      0.08       3.03 f
+  U119036/Y (OAI21X4)                                     0.16       3.20 r
+  U51048/Y (NOR2BX4)                                      0.10       3.30 r
+  U51047/Y (NOR2X6)                                       0.03       3.32 f
+  U36964/Y (NAND2X4)                                      0.04       3.36 r
+  U80017/Y (XOR2X8)                                       0.06       3.42 f
+  R_3747/D (DFFSHQX8)                                     0.00       3.42 f
+  data arrival time                                                  3.42
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  R_3747/CK (DFFSHQX8)                                    0.00       3.50 r
+  library setup time                                     -0.08       3.42
+  data required time                                                 3.42
+  --------------------------------------------------------------------------
+  data required time                                                 3.42
+  data arrival time                                                 -3.42
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U23842/Y (AOI211X1)               0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U23845/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[10] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: R_4435 (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: R_4047 (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  R_4435/CK (DFFSHQX8)                     0.00 #     0.00 r
+  R_4435/Q (DFFSHQX8)                      0.31       0.31 r
+  U101777/Y (CLKBUFX40)                    0.13       0.44 r
+  U33709/Y (MXI2X1)                        0.28       0.73 r
+  U33707/Y (INVXL)                         0.22       0.95 f
+  U70465/Y (MX2XL)                         0.24       1.19 f
+  U127896/Y (NAND2X2)                      0.12       1.31 r
+  U127897/Y (INVX2)                        0.05       1.36 f
+  U87006/Y (AOI21X1)                       0.14       1.50 r
+  U127899/Y (OAI21X4)                      0.08       1.58 f
+  U41612/Y (AO21X4)                        0.13       1.71 f
+  U46372/Y (OAI2BB1X4)                     0.11       1.82 f
+  U24350/Y (INVX2)                         0.09       1.92 r
+  U9581/Y (XOR2X1)                         0.26       2.18 r
+  U106819/Y (CLKNAND2X2)                   0.24       2.41 f
+  U55827/Y (OAI21X1)                       0.20       2.61 r
+  U39442/Y (AOI21X6)                       0.05       2.66 f
+  U127970/Y (OAI21X6)                      0.10       2.77 r
+  U29825/Y (AOI21X6)                       0.06       2.83 f
+  U21026/Y (OAI21X6)                       0.10       2.93 r
+  U47521/Y (AOI21X8)                       0.06       2.99 f
+  U47520/Y (OAI21X8)                       0.10       3.08 r
+  U37165/Y (NAND2X4)                       0.06       3.14 f
+  U47082/Y (NAND2BX8)                      0.06       3.20 r
+  U10472/Y (NAND2X4)                       0.04       3.24 f
+  U10425/Y (NAND2X6)                       0.06       3.30 r
+  U19420/Y (AOI21X4)                       0.04       3.35 f
+  U28362/Y (XOR2X2)                        0.08       3.42 r
+  R_4047/D (DFFSQXL)                       0.00       3.42 r
+  data arrival time                                   3.42
+
+  clock clk (rise edge)                    3.50       3.50
+  clock network delay (ideal)              0.00       3.50
+  R_4047/CK (DFFSQXL)                      0.00       3.50 r
+  library setup time                      -0.08       3.42
+  data required time                                  3.42
+  -----------------------------------------------------------
+  data required time                                  3.42
+  data arrival time                                  -3.42
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U1027/Y (AOI211X1)                0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U24363/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[33] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: R_4296 (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_41__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  R_4296/CK (DFFRHQX8)                                    0.00 #     0.00 r
+  R_4296/Q (DFFRHQX8)                                     0.10       0.10 f
+  U57610/Y (BUFX14)                                       0.05       0.16 f
+  U80172/Y (OAI21X8)                                      0.07       0.23 r
+  U10001/Y (AND3X6)                                       0.18       0.42 r
+  U3496/Y (NAND2X8)                                       0.10       0.52 f
+  agu_integrate/factor_idx_0_ (AGU_INTEGRATE)             0.00       0.52 f
+  agu_integrate/U753/Y (BUFX14)                           0.09       0.60 f
+  agu_integrate/U748/Y (CLKNAND2X4)                       0.05       0.65 r
+  agu_integrate/U1343/Y (OAI21X8)                         0.09       0.74 f
+  agu_integrate/U3085/CO (ADDHX1)                         0.12       0.86 f
+  agu_integrate/U3265/CO (ADDFX2)                         0.14       1.00 f
+  agu_integrate/U3323/CO (ADDFX2)                         0.14       1.14 f
+  agu_integrate/U3333/CO (ADDFX2)                         0.14       1.27 f
+  agu_integrate/U3347/CO (ADDFX2)                         0.14       1.41 f
+  agu_integrate/U3367/CO (ADDFX2)                         0.14       1.55 f
+  agu_integrate/U3352/CO (ADDFX2)                         0.14       1.68 f
+  agu_integrate/U1570/CO (ADDFX2)                         0.14       1.82 f
+  agu_integrate/U1844/CO (ADDFHX4)                        0.09       1.92 f
+  agu_integrate/U3392/S (ADDFHX4)                         0.11       2.02 r
+  agu_integrate/U1845/Y (NAND2BX8)                        0.06       2.08 r
+  agu_integrate/addr3_out[9] (AGU_INTEGRATE)              0.00       2.08 r
+  U151225/Y (INVX4)                                       0.04       2.12 f
+  U71585/Y (AOI21X2)                                      0.17       2.29 r
+  PING_PONG_MEM_GROUP_1/addr3[9] (mem_wrapper_0)          0.00       2.29 r
+  PING_PONG_MEM_GROUP_1/U328/Y (BUFX10)                   0.14       2.42 r
+  PING_PONG_MEM_GROUP_1/U7598/Y (INVX4)                   0.06       2.48 f
+  PING_PONG_MEM_GROUP_1/U9034/Y (BUFX12)                  0.13       2.61 f
+  PING_PONG_MEM_GROUP_1/U14065/Y (OAI22X1)                0.15       2.75 r
+  PING_PONG_MEM_GROUP_1/U14066/Y (AOI211X1)               0.09       2.84 f
+  PING_PONG_MEM_GROUP_1/U14068/Y (AOI22X1)                0.37       3.21 r
+  PING_PONG_MEM_GROUP_1/GG_41__sram/A[9] (SRAM_SP_2048)
+                                                          0.00       3.21 r
+  data arrival time                                                  3.21
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_41__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.29       3.21
+  data required time                                                 3.21
+  --------------------------------------------------------------------------
+  data required time                                                 3.21
+  data arrival time                                                 -3.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U13507/Y (AOI211X1)               0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U23823/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[24] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: DELAY_BUFFER_n0_2_sub_1_delay_reg_10__4_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: R_3868 (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DELAY_BUFFER_n0_2_sub_1_delay_reg_10__4_/CK (DFFRHQX8)
+                                                          0.00 #     0.00 r
+  DELAY_BUFFER_n0_2_sub_1_delay_reg_10__4_/Q (DFFRHQX8)
+                                                          0.10       0.10 r
+  REGISTERS/Read_Reg2_4_ (Registers)                      0.00       0.10 r
+  REGISTERS/U3991/Y (CLKBUFX40)                           0.07       0.18 r
+  REGISTERS/U3127/Y (INVX3)                               0.03       0.21 f
+  REGISTERS/U2518/Y (AND2X8)                              0.10       0.31 f
+  REGISTERS/U537/Y (AND2X6)                               0.13       0.45 f
+  REGISTERS/U492/Y (NAND2X8)                              0.09       0.53 r
+  REGISTERS/U1167/Y (INVX1)                               0.07       0.61 f
+  REGISTERS/U2763/Y (NOR3X4)                              0.12       0.72 r
+  REGISTERS/U1688/Y (NAND3X4)                             0.06       0.78 f
+  REGISTERS/U1432/Y (NOR2X2)                              0.09       0.88 r
+  REGISTERS/U5633/Y (NAND2BX2)                            0.07       0.94 f
+  REGISTERS/U1705/Y (OAI21X3)                             0.10       1.05 r
+  REGISTERS/U1689/Y (NAND4X4)                             0.10       1.15 f
+  REGISTERS/Read_Data2_20_ (Registers)                    0.00       1.15 f
+  U15252/Y (NAND2X4)                                      0.07       1.22 r
+  U47040/Y (CLKNAND2X12)                                  0.15       1.38 f
+  U79915/Y (INVX8)                                        0.09       1.47 r
+  U81570/Y (INVX12)                                       0.06       1.53 f
+  U98396/Y (XNOR2X2)                                      0.10       1.63 f
+  U98421/Y (OAI22X1)                                      0.15       1.78 r
+  U98450/S (ADDFX2)                                       0.24       2.02 f
+  U2060/CO (ADDFX2)                                       0.15       2.16 f
+  U98456/CO (ADDFHX1)                                     0.15       2.31 f
+  U38210/CO (ADDFHX2)                                     0.11       2.42 f
+  U75108/S (ADDFX2)                                       0.23       2.65 f
+  U98478/Y (OR2X6)                                        0.09       2.74 f
+  U12068/Y (NAND2X4)                                      0.06       2.81 r
+  U54733/Y (AOI2BB2X4)                                    0.08       2.88 r
+  U37507/Y (NAND2X4)                                      0.08       2.96 f
+  U28913/Y (AOI21X4)                                      0.09       3.05 r
+  U28761/Y (AND2X4)                                       0.07       3.11 r
+  U52507/Y (AND3X8)                                       0.06       3.18 r
+  U19433/Y (INVX12)                                       0.03       3.21 f
+  U55553/Y (BUFX8)                                        0.07       3.28 f
+  U142925/Y (AOI21X2)                                     0.11       3.39 r
+  U76854/Y (OAI2BB1X4)                                    0.04       3.43 f
+  R_3868/D (DFFSQXL)                                      0.00       3.43 f
+  data arrival time                                                  3.43
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  R_3868/CK (DFFSQXL)                                     0.00       3.50 r
+  library setup time                                     -0.07       3.43
+  data required time                                                 3.43
+  --------------------------------------------------------------------------
+  data required time                                                 3.43
+  data arrival time                                                 -3.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U12741/Y (AOI211X1)               0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U24445/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[6] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/DP_OP_595J7_124_3477_R_369
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_0/GG_42__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/DP_OP_595J7_124_3477_R_369/CK (DFFRQX4)
+                                                          0.00 #     0.00 r
+  agu_integrate/DP_OP_595J7_124_3477_R_369/Q (DFFRQX4)
+                                                          0.19       0.19 f
+  agu_integrate/U163/Y (OR2X2)                            0.10       0.30 f
+  agu_integrate/U1307/CO (ADDHX4)                         0.08       0.37 f
+  agu_integrate/U1873/CO (ADDHX4)                         0.07       0.44 f
+  agu_integrate/U765/CO (ADDHX4)                          0.07       0.51 f
+  agu_integrate/U1012/CO (ADDHX4)                         0.07       0.59 f
+  agu_integrate/U127/Y (NOR2X4)                           0.07       0.65 r
+  agu_integrate/U1332/Y (XOR2X8)                          0.12       0.77 r
+  agu_integrate/U115/Y (INVX12)                           0.06       0.83 f
+  agu_integrate/U3434/Y (AOI2B1X4)                        0.08       0.91 f
+  agu_integrate/U1331/Y (OAI2BB1X4)                       0.09       1.00 r
+  agu_integrate/bank0_out[4] (AGU_INTEGRATE)              0.00       1.00 r
+  U163189/Y (OA22X4)                                      0.27       1.28 r
+  PING_PONG_MEM_GROUP_0/bank0[4] (mem_wrapper_1)          0.00       1.28 r
+  PING_PONG_MEM_GROUP_0/U6602/Y (OR2X4)                   0.12       1.40 r
+  PING_PONG_MEM_GROUP_0/U547/Y (NOR2X4)                   0.04       1.44 f
+  PING_PONG_MEM_GROUP_0/U6912/Y (AND2X6)                  0.08       1.53 f
+  PING_PONG_MEM_GROUP_0/U7780/Y (NAND2X6)                 0.11       1.64 r
+  PING_PONG_MEM_GROUP_0/U6226/Y (NAND2X2)                 0.13       1.77 f
+  PING_PONG_MEM_GROUP_0/U4987/Y (NOR2BX8)                 0.09       1.86 r
+  PING_PONG_MEM_GROUP_0/U2853/Y (NAND2X4)                 0.06       1.92 f
+  PING_PONG_MEM_GROUP_0/U4986/Y (NAND2BX2)                0.09       2.01 f
+  PING_PONG_MEM_GROUP_0/U19445/Y (CLKAND2X4)              0.12       2.13 f
+  PING_PONG_MEM_GROUP_0/U19455/Y (INVX4)                  0.07       2.21 r
+  PING_PONG_MEM_GROUP_0/U4994/Y (AND2X6)                  0.16       2.37 r
+  PING_PONG_MEM_GROUP_0/U1433/Y (INVX1)                   0.16       2.52 f
+  PING_PONG_MEM_GROUP_0/U22665/Y (OAI21XL)                0.20       2.72 r
+  PING_PONG_MEM_GROUP_0/U14537/Y (AOI211XL)               0.11       2.84 f
+  PING_PONG_MEM_GROUP_0/U22666/Y (AOI21X1)                0.38       3.21 r
+  PING_PONG_MEM_GROUP_0/GG_42__sram/A[5] (SRAM_SP_2048)
+                                                          0.00       3.21 r
+  data arrival time                                                  3.21
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_0/GG_42__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.29       3.21
+  data required time                                                 3.21
+  --------------------------------------------------------------------------
+  data required time                                                 3.21
+  data arrival time                                                 -3.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U912/Y (AOI211X1)                 0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U23666/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[21] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U897/Y (AOI211X1)                 0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U23813/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[26] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U13503/Y (AOI211X1)               0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U23800/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[29] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U23836/Y (AOI211X1)               0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U23839/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[11] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U23716/Y (AOI211X1)               0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U23719/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[12] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U13101/Y (AOI211X1)               0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U24413/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[38] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U901/Y (AOI211X1)                 0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U23662/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[22] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U900/Y (AOI211X1)                 0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U23827/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[23] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U906/Y (AOI211X1)                 0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U23804/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[28] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U23710/Y (AOI211X1)               0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U23713/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[13] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: agu_integrate/n0_4_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PING_PONG_MEM_GROUP_1/GG_39__sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                tsmc090_wl10          typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  agu_integrate/n0_4_reg_3_/CK (DFFRQX4)                  0.00 #     0.00 r
+  agu_integrate/n0_4_reg_3_/Q (DFFRQX4)                   0.22       0.22 f
+  agu_integrate/U2926/CO (ADDFHX2)                        0.16       0.38 f
+  agu_integrate/U2928/CO (ADDFHX4)                        0.09       0.47 f
+  agu_integrate/U2929/CO (ADDFHX4)                        0.08       0.55 f
+  agu_integrate/U2930/S (ADDFHX4)                         0.11       0.67 f
+  agu_integrate/U2086/Y (NOR2X8)                          0.05       0.72 r
+  agu_integrate/U2084/Y (XOR2X8)                          0.06       0.78 f
+  agu_integrate/U2931/Y (CLKBUFX40)                       0.07       0.85 f
+  agu_integrate/U3545/Y (NOR2BX4)                         0.07       0.92 r
+  agu_integrate/U420/Y (OR3X6)                            0.10       1.02 r
+  agu_integrate/bank4_out[5] (AGU_INTEGRATE)              0.00       1.02 r
+  U6194/Y (AO2B2X2)                                       0.13       1.15 f
+  U2612/Y (INVX4)                                         0.14       1.29 r
+  PING_PONG_MEM_GROUP_1/bank4[5] (mem_wrapper_0)          0.00       1.29 r
+  PING_PONG_MEM_GROUP_1/U6080/Y (NAND2BX8)                0.08       1.37 f
+  PING_PONG_MEM_GROUP_1/U6299/Y (INVX4)                   0.05       1.42 r
+  PING_PONG_MEM_GROUP_1/U6300/Y (NAND2X6)                 0.06       1.48 f
+  PING_PONG_MEM_GROUP_1/U7081/Y (OR2X2)                   0.11       1.59 f
+  PING_PONG_MEM_GROUP_1/U1760/Y (OAI2B1XL)                0.15       1.75 f
+  PING_PONG_MEM_GROUP_1/U10894/Y (OAI2BB1X2)              0.12       1.87 f
+  PING_PONG_MEM_GROUP_1/U10895/Y (NAND2X4)                0.09       1.96 r
+  PING_PONG_MEM_GROUP_1/U10896/Y (OA21X4)                 0.13       2.09 r
+  PING_PONG_MEM_GROUP_1/U10897/Y (INVX4)                  0.05       2.14 f
+  PING_PONG_MEM_GROUP_1/U10903/Y (NAND2X2)                0.09       2.23 r
+  PING_PONG_MEM_GROUP_1/U320/Y (BUFX5)                    0.17       2.40 r
+  PING_PONG_MEM_GROUP_1/U5830/Y (NOR2X1)                  0.18       2.58 f
+  PING_PONG_MEM_GROUP_1/U3924/Y (BUFX14)                  0.21       2.79 f
+  PING_PONG_MEM_GROUP_1/U13781/Y (AOI211X1)               0.21       3.00 r
+  PING_PONG_MEM_GROUP_1/U23701/Y (NAND3XL)                0.32       3.32 f
+  PING_PONG_MEM_GROUP_1/GG_39__sram/D[15] (SRAM_SP_2048)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  PING_PONG_MEM_GROUP_1/GG_39__sram/CLK (SRAM_SP_2048)
+                                                          0.00       3.50 r
+  library setup time                                     -0.18       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

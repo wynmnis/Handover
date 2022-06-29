@@ -1,0 +1,280 @@
+Magic 271485
+Revision Verdi_R-2020.12
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 23 1920 1017 222 153
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/ldap-users/ryanhuang/Desktop/FFT_Implement_v2/src/top_tb.vcd" "/home/ldap-users/ryanhuang/Desktop/FFT_Implement_v2/src/top_tb.vcd.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 1306136802.399236 1306208197.600764
+cursor 1306172500.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+userMarker 1306172500 done ID_GREEN5 long_dashed
+userMarker 1229872500 IDFT_61_5 ID_GREEN5 long_dashed
+userMarker 1134502500 IDFT_61_4 ID_GREEN5 long_dashed
+userMarker 1070907109.912 IDFT_61_3 ID_GREEN5 long_dashed
+userMarker 994602500 DFT_61_5 ID_GREEN5 long_dashed
+userMarker 899232304.461 DFT_61_4 ID_GREEN5 long_dashed
+userMarker 835637366.018 DFT_61_3 ID_GREEN5 long_dashed
+userMarker 741042263.576 IDFT_41_4 ID_GREEN5 long_dashed
+userMarker 693722263.576 IDFT_41_2 ID_GREEN5 long_dashed
+userMarker 618037263.576 IDFT_41_5 ID_GREEN5 long_dashed
+userMarker 570717500 DFT_41_2 ID_GREEN5 long_dashed
+userMarker 476122500 DFT_41_4 ID_GREEN5 long_dashed
+userMarker 400392500 DFT_41_5 ID_GREEN5 long_dashed
+userMarker 7500 DFT_31_2 ID_GREEN5 long_dashed
+userMarker 62577429.097 DFT_31_3 ID_GREEN5 long_dashed
+userMarker 200222287.291 IDFT_31_2 ID_GREEN5 long_dashed
+userMarker 262792267.609 IDFT_31_3 ID_GREEN5 long_dashed
+userMarker 125147204.53 DFT_31_5 ID_GREEN5 long_dashed
+userMarker 325362500 IDFT_31_5 ID_GREEN5 long_dashed
+
+; set reference marker 
+; refMarker marker_name
+refMarker IDFT_31_5
+
+; visible top row signal index
+top 0
+; marker line index
+markerPos 121
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "TOP"
+activeDirFile "" "/home/ldap-users/ryanhuang/Desktop/FFT_Implement_v2/src/top_tb.vcd.fsdb"
+addSignal -h 15 /top_tb/CONTROLLER/clk
+addSignal -h 15 -holdScope DFT_31_2_done
+addSignal -h 15 -holdScope DFT_31_3_done
+addSignal -h 15 -holdScope DFT_31_5_done
+addSignal -h 15 -holdScope IDFT_31_2_done
+addSignal -h 15 -holdScope IDFT_31_3_done
+addSignal -h 15 -holdScope IDFT_31_5_done
+addSignal -h 15 -holdScope DFT_41_5_done
+addSignal -h 15 -holdScope DFT_41_4_done
+addSignal -h 15 -holdScope DFT_41_2_done
+addSignal -h 15 -holdScope IDFT_41_5_done
+addSignal -h 15 -holdScope IDFT_41_2_done
+addSignal -h 15 -holdScope IDFT_41_4_done
+addSignal -h 15 -holdScope DFT_61_3_done
+addSignal -h 15 -holdScope DFT_61_4_done
+addSignal -h 15 -holdScope DFT_61_5_done
+addSignal -h 15 -holdScope IDFT_61_3_done
+addSignal -h 15 -holdScope IDFT_61_4_done
+addSignal -h 15 -holdScope IDFT_61_5_done
+addGroup "AGU"
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/agu_integrate/n1[8:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope n2[8:0]
+addSignal -h 15 -holdScope m1_out_0[4:0]
+addSignal -h 15 -holdScope m2_out[4:0]
+addSignal -h 15 -holdScope AGU_2_done
+addSignal -h 15 -holdScope rst_n
+addGroup "MEM"
+addSubGroup "READMEM"
+addSignal -h 15 /top_tb/CONTROLLER/PING_PONG_MEM/sel_read_group[1:0]
+addSubGroup "bank" -e FALSE
+endSubGroup "bank"
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/PING_PONG_MEM/bank0_read[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank1_read[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank2_read[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank3_read[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank4_read[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank5_read[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank6_read[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank7_read[6:0]
+addSubGroup "addr" -e FALSE
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/PING_PONG_MEM/addr0_read[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr1_read[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr2_read[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr3_read[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr4_read[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr5_read[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr6_read[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr7_read[10:0]
+endSubGroup "addr"
+addSubGroup "read_data"
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/PING_PONG_MEM/mem_OUT_0[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_OUT_1[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_OUT_2[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_OUT_3[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_OUT_4[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_OUT_5[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_OUT_6[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_OUT_7[25:0]
+endSubGroup "read_data"
+endSubGroup "READMEM"
+addSubGroup "WRITEMEM"
+addSignal -h 15 /top_tb/CONTROLLER/PING_PONG_MEM/sel_write_group[1:0]
+addSubGroup "bank"
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/PING_PONG_MEM/bank0_write[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank1_write[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank2_write[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank3_write[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank4_write[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank5_write[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank6_write[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank7_write[6:0]
+endSubGroup "bank"
+endSubGroup "WRITEMEM"
+addSubGroup "addr" -e FALSE
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/PING_PONG_MEM/addr0_write[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr1_write[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr2_write[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr3_write[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr4_write[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr5_write[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr6_write[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr7_write[10:0]
+endSubGroup "addr"
+addSubGroup "write_data"
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/PING_PONG_MEM/mem_IN_0[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_1[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_2[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_3[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_4[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_5[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_6[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_7[25:0]
+endSubGroup "write_data"
+addSubGroup "sum"
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/PING_PONG_MEM/sel_group_sum[1:0]
+addSignal -h 15 -holdScope write_sum
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr_sum[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank_sum[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_OUT_sum[25:0]
+endSubGroup "sum"
+addSubGroup "G1 sram0" -e FALSE
+addSignal -h 15 /top_tb/CONTROLLER/PING_PONG_MEM/GROUP_1/GG[0]/sram/CEN
+addSignal -h 15 -UNSIGNED -UDEC -holdScope A[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope D[63:0]
+addSignal -h 15 -holdScope WEN
+addSignal -h 15 -UNSIGNED -UDEC -holdScope Q[63:0]
+addSubGroup "G1 sram1" -e FALSE
+endSubGroup "G1 sram1"
+addSignal -h 15 /top_tb/CONTROLLER/PING_PONG_MEM/GROUP_1/GG[1]/sram/CEN
+addSignal -h 15 -UNSIGNED -UDEC -holdScope A[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope D[63:0]
+addSignal -h 15 -holdScope WEN
+addSignal -h 15 -UNSIGNED -UDEC -holdScope Q[63:0]
+endSubGroup "G1 sram0"
+addSubGroup "d0"
+addSignal -h 15 /top_tb/CONTROLLER/FFT_TOP/CONFIG_FFT/clk
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/PING_PONG_MEM/sel_group_d0[1:0]
+addSignal -h 15 -holdScope write_d0
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bank_d0[6:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr_d0[10:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_OUT_d0[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_d0[25:0]
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/FFT_TOP/CONFIG_FFT/add_d0[25:0]
+addSignal -h 15 /top_tb/CONTROLLER/sum_trigger
+addSignal -h 15 -holdScope sum_trigger_delay1
+addSignal -h 15 -holdScope sum_trigger_delay2
+addSignal -h 15 /top_tb/CONTROLLER/FFT_TOP/CONFIG_FFT/sum_trigger_delay7
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/bank_sum[6:0]
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/FFT_TOP/CONFIG_FFT/d0_in[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope d0_tmp[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope d0_tmp_2[25:0]
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/bank_sum_out[6:0]
+endSubGroup "d0"
+addGroup "FFT"
+addSignal -h 15 /top_tb/CONTROLLER/FFT_TOP/CONFIG_FFT/IFFT_LAST_STAGE
+addSignal -h 15 -holdScope point[2:0]
+addSignal -h 15 -holdScope inverse
+addSignal -h 15 -UNSIGNED -UDEC -holdScope add_d0[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope FFT_OUT_0[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope FFT_OUT_1[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope FFT_OUT_2[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope FFT_OUT_3[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope FFT_OUT_4[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope FFT_OUT_5[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope FFT_OUT_6[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope FFT_OUT_7[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_0_tmp[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_1_tmp[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_2_tmp[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_3_tmp[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_4_tmp[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_5_tmp[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_6_tmp[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope mem_IN_7_tmp[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope MUL_COEF_0[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope MUL_COEF_1[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope MUL_COEF_2[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope MUL_COEF_3[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope MUL_COEF_4[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope MUL_COEF_5[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope MUL_COEF_6[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope MUL_COEF_7[25:0]
+addGroup "Register" -e FALSE
+addSignal -h 15 -UNSIGNED -UDEC /top_tb/CONTROLLER/REGISTERS/sel[2:0]
+addSignal -h 15 -holdScope m1_out_0
+addSignal -h 15 -UNSIGNED -UDEC -holdScope Read_Data0[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope Read_Data1[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope Read_Data2[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope Read_Data3[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope Read_Data4[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope Read_Data5[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope Read_Data6[25:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope Read_Data7[25:0]
+addGroup "G6"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/ldap-users/ryanhuang/Desktop/FFT_Implement_v2/src/top_tb.vcd.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/FFT_OUT_mux"
+"/top_tb"
+"/top_tb/CONTROLLER"
+"/top_tb/CONTROLLER/FFT_TOP"
+"/top_tb/CONTROLLER/PING_PONG_MEM"
+"/top_tb/CONTROLLER/PING_PONG_MEM/GROUP_0"
+
+SCOPE_LIST_BEGIN
+"/FFT_OUT_mux"
+"/top_tb/CONTROLLER/FFT_TOP"
+"/top_tb/CONTROLLER/FFT_TOP/CONFIG_FFT"
+"/top_tb"
+"/top_tb/CONTROLLER"
+"/top_tb/CONTROLLER/PING_PONG_MEM"
+"/top_tb/CONTROLLER/REGISTERS"
+"/top_tb/CONTROLLER/DELAY_BUFFER"
+"/top_tb/CONTROLLER/FFT_TOP/CONFIG_FFT/A_0"
+"/top_tb/CONTROLLER/PING_PONG_MEM/GROUP_0"
+"/top_tb/CONTROLLER/PING_PONG_MEM/GROUP_0/GG[0]"
+"/top_tb/CONTROLLER/PING_PONG_MEM/GROUP_0/GG[0]/sram"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

@@ -1,0 +1,30 @@
+ 
+                             Library Compiler (TM)
+                                 DesignWare (R)
+
+                 Version R-2020.09 for linux64 - Aug 29, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Initializing...
+lc_shell> read_lib SRAM_SP_2048_tt_1.0_25.0_syn.lib
+Reading '/home/ldap-users/ryanhuang/Desktop/FFT_Implement/mem/SRAM_SP_2048_tt_1.0_25.0_syn.lib' ...
+Warning: Line 58, The 'internal_power_calculation' attribute in char_config group is required for NLPM library. 
+        No default can be applied to this attribute. (LBDB-366)
+Technology library 'SRAM_SP_2048' read successfully
+1
+lc_shell> write_lib SRAM_SP_2048 -format -output SRAM_SP_2048.db
+Error: extra positional option 'SRAM_SP_2048.db' (CMD-012)
+lc_shell> write_lib SRAM_SP_2048 -format db -output SRAM_SP_2048.db
+Wrote the 'SRAM_SP_2048' library to '/home/ldap-users/ryanhuang/Desktop/FFT_Implement/mem/SRAM_SP_2048.db' successfully
+1
+lc_shell> exit
+Maximum memory usage for this session: 85.74 MB
+CPU usage for this session:      2 seconds (  0.00 hours)
+Elapsed time for this session:     74 seconds (  0.02 hours)
+Thank you for using Library Compiler.
+
